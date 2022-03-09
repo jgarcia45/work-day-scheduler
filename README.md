@@ -5,7 +5,6 @@
 
 
 ## User Story
-
 ```
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
@@ -35,12 +34,12 @@ Here is a preview of the website after the application ends: ![]()
 
 ## Link
 
-A link to the [code]():
+A link to the [code](https://github.com/jgarcia45/work-day-scheduler):
+```
+https://github.com/jgarcia45/work-day-scheduler
 ```
 
+A link to the deployed [URL](https://jgarcia45.github.io/work-day-scheduler/):
 ```
-
-A link to the deployed [URL]():
-```
-
+https://jgarcia45.github.io/work-day-scheduler/
 ``` 
