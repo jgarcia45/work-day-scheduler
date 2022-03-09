@@ -2,7 +2,7 @@
 [![MSU](https://img.shields.io/badge/MSU-Coding%20Bootcamp-green/)](https://bootcamp.msu.edu/)
 
 ## Description
-
+Our task is to create a simple calendar application that would allow users to save events for each hour of the day. The application will run in the browser and feature dynamically update HTML, CSS, and jQuery.
 
 ## User Story
 ```
