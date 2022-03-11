@@ -1,14 +1,26 @@
 // Variable Definitions
 var todayDate = $('#currentDay');
-var currentTime = moment().hour(); // Gets the hour of the day
+var currentTime = moment().hours(); // Gets the hour of the day
 
 // Displays the Date in the Header
 todayDate.text(moment().format('dddd, MMMM Do'));
 
 // Save the time block
 $('.saveBtn').on('click', function () {
+    var timeofDay = $(this).siblings('.hour').text();
+    var descriptionBlock = $(this).siblings('.description').val();
 
+    localStorage.setItem(timeofDay, descriptionBlock);
 });
+
+// Refreshing the Page
+var userRefresh = function () {
+    $('.hour').each(function () {
+        if ($(this).text() !== null) {
+            $(this).siblings('.description').val(localStorage.getItem($(this).text()));
+        }
+    });
+};
 
 // Indicate whether it is in the past, present, or future
 var auditTask = function () {
@@ -19,20 +31,21 @@ var auditTask = function () {
 
         // Compares the time to set the class attribute to the right color.
         if (timeBlock > currentTime) {
-            console.log("Time: " + timeBlock);
-            console.log("Current: " + currentTime);
             $(this).addClass('future');
         } else if (timeBlock === currentTime) {
             $(this).addClass('present');
         } else {
             $(this).addClass('past');
         }
-    })
+    });
 };
 
-// audits the time block every 30 minutes
+// Refreshes the Page every 30 Minutes
 setInterval(function () {
-    auditTask();
+    $('.hour').each(function () {
+        auditTask();
+    });
 }, 1800000);
 
 auditTask();
+userRefresh();
