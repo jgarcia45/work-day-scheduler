@@ -1,6 +1,6 @@
 // Variable Definitions
 var todayDate = $('#currentDay');
-var currentTime = moment().hours(); // Gets the hour of the day
+var currentTime = moment().hour(); // Gets the hour of the day in MILITARY TIME SO IT GETS THE NUMBERS FROM 0-23
 
 // Displays the Date in the Header
 todayDate.text(moment().format('dddd, MMMM Do'));
