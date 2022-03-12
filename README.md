@@ -29,8 +29,8 @@ THEN the saved events persist
 ```
 
 ## Screenshot
-Here is a preview of the website before the application starts: ![]()
-Here is a preview of the website after the application ends: ![]()
+Here is a preview of the website and does not include any text: ![Empty](./assets/images/before_text.png)
+Here is a preview of the website with text includ: ![Full](./assets/images/after_text.png)
 
 ## Link
 
