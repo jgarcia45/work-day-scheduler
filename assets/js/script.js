@@ -10,6 +10,7 @@ $('.saveBtn').on('click', function () {
     var timeofDay = $(this).siblings('.hour').text();
     var descriptionBlock = $(this).siblings('.description').val();
 
+    // Stores the hour and discription in the Local Storage
     localStorage.setItem(timeofDay, descriptionBlock);
 });
 
@@ -24,7 +25,6 @@ var userRefresh = function () {
 
 // Indicate whether it is in the past, present, or future
 var auditTask = function () {
-
     $('.time-block').each(function () {
         // Grabs the ID from HTML and parse it into an integer and stores the value in the variable
         var timeBlock = parseInt($(this).attr('id'));
@@ -38,6 +38,7 @@ var auditTask = function () {
             $(this).addClass('past');
         }
     });
+
 };
 
 // Refreshes the Page every 30 Minutes
